@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio / Portfolio - Jonathan Jiménez</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .profile img {
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .project-card {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #64ffda;
+    }
+
+    footer a {
+      color: #64ffda;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <img src="assets/images/jonathan.png" alt="Jonathan Jiménez" />
+      <h1>Jonathan Jiménez</h1>
+      <p>Ing. de Software y Redes</p>
+    </div>
+    <nav>
+      <a href="index.html">Inicio / Home</a>
+      <a href="about.html">Sobre mí / About</a>
+      <a href="portfolio.html">Portafolio / Portfolio</a>
+      <a href="contact.html">Contacto / Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 style="text-align:center; margin-top: 2rem;">Portafolio / Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>Soporte Técnico para Red Empresarial</h3>
+          <p>Configuré, aseguré y optimicé la red de una pequeña empresa. Implementé políticas de seguridad, segmentación y acceso remoto seguro. Tecnologías: Cisco, Fortinet, Windows Server.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Landing Page para Emprendimiento Local</h3>
+          <p>Diseñé y desarrollé una web responsiva para un negocio local con formulario de contacto e integración de redes sociales. Herramientas: HTML, CSS, JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Mantenimiento Correctivo y Preventivo</h3>
+          <p>Realicé mantenimiento a equipos, configuración de impresoras, respaldos y gestión de inventario. Herramientas: Windows 10, redes LAN, software de diagnóstico.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Clon de Sitio Web Informativo</h3>
+          <p>Repliqué un sitio institucional con navegación, formulario de contacto y galería de imágenes. Tecnologías: HTML, CSS, JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Rediseño de Red y Filtrado de Contenido</h3>
+          <p>Resolví problemas de lentitud y filtrado de contenido. Implementé políticas de acceso y optimización del cableado. Herramientas: Mikrotik, switches administrables.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contacto: <a href="mailto:inge.jonathan@icloud.com">inge.jonathan@icloud.com</a></p>
+    <p>&copy; 2025 Jonathan Jiménez</p>
+  </footer>
+</body>
+</html>
