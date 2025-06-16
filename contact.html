@@ -2,45 +2,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto / Contact - Jonathan Jiménez</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="¿Tienes un proyecto o necesitas soporte técnico? Contacta con Jonathan Jiménez y recibe atención personalizada." />
+  <meta name="author" content="Jonathan Jiménez" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Contacto | Jonathan Jiménez" />
+  <meta property="og:description" content="Ponte en contacto conmigo para servicios de desarrollo web y soporte TI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jonathan-jimenez.netlify.app/contact.html" />
+  <meta property="og:image" content="https://jonathan-jimenez.netlify.app/img/contact.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contacto | Jonathan Jiménez" />
+  <meta name="twitter:description" content="Estoy disponible para ayudarte en tus proyectos o necesidades técnicas." />
+  <meta name="twitter:image" content="https://jonathan-jimenez.netlify.app/img/contact.jpg" />
+  <title>Contacto / Contact - Jonathan Jiménez</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: #90caf9;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .profile img {
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: none;
+      background-color: #2c2c2c;
+      color: #f5f5f5;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background-color: #64ffda;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #52e0c4;
+    }
+
+    footer a {
+      color: #64ffda;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="profile">
-            <img src="assets/images/profile.png" alt="Jonathan Jiménez">
-            <h1>Jonathan Jiménez</h1>
-            <p>Ing. de Software y Redes</p>
-        </div>
-        <nav>
-            <a href="index.html">Inicio / Home</a>
-            <a href="about.html">Sobre mí / About</a>
-            <a href="portfolio.html">Portafolio / Portfolio</a>
-            <a href="contact.html">Contacto / Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Contacto / Contact</h2>
-            <form action="mailto:inge.jonathan@icloud.com" method="POST" enctype="text/plain">
-                <label for="name">Nombre / Name:</label>
-                <input type="text" id="name" name="name" required>
+  <header>
+    <div class="profile">
+      <img src="assets/images/jonathan.jpeg" alt="Jonathan Jiménez" />
+      <h1>Jonathan Jiménez</h1>
+      <p>Ing. de Software y Redes</p>
+    </div>
+    <nav>
+      <a href="index.html">Inicio / Home</a>
+      <a href="about.html">Sobre mí / About</a>
+      <a href="portfolio.html">Portafolio / Portfolio</a>
+    </nav>
+  </header>
 
-                <label for="email">Correo / Email:</label>
-                <input type="email" id="email" name="email" required>
+  <main>
+    <h2 style="text-align:center;">Contacto / Contact Me</h2>
+    <form action="https://formspree.io/f/mdkzevjr" method="POST" class="max-w-md mx-auto space-y-4"> 
+      <input type="text" id="name" name="name" required>
 
-                <label for="message">Mensaje / Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="email">Correo / Email:</label>
+      <input type="email" id="email" name="email" required>
 
-                <button type="submit">Enviar / Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Contacto: <a href="mailto:inge.jonathan@icloud.com">inge.jonathan@icloud.com</a></p>
-        <p>&copy; 2025 Jonathan Jiménez</p>
-    </footer>
+      <label for="message">Mensaje / Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Enviar / Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Correo: <a href="mailto:inge.jonathan@icloud.com">inge.jonathan@icloud.com</a></p>
+    <p>&copy; 2025 Jonathan Jiménez</p>
+  </footer>
 </body>
 </html>
