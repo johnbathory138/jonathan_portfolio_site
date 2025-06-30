@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Códigos QR | Jonathan Jiménez</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #008ba3;
+    }
+    #qrcode {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generador de Códigos QR</h1>
+  <p>Introduce una URL para generar tu código QR</p>
+  <input type="text" id="url" placeholder="https://ejemplo.com">
+  <br>
+  <button onclick="generarQR()">Generar QR</button>
+  <div id="qrcode"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  let qr;
+
+  function generarQR() {
+    const url = document.getElementById("url").value;
+    const qrContainer = document.getElementById("qrcode");
+    qrContainer.innerHTML = ""; // Limpiar QR anterior
+
+    if (url.trim() !== "") {
+      qr = new QRCode(qrContainer, {
+        text: url,
+        width: 256,
+        height: 256,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+
+      // Esperar a que se renderice y luego permitir la descarga
+      setTimeout(() => {
+        const img = qrContainer.querySelector("img");
+        if (img) {
+          const downloadBtn = document.createElement("a");
+          downloadBtn.href = img.src;
+          downloadBtn.download = "codigo_qr.png";
+          downloadBtn.innerText = "Descargar QR";
+          downloadBtn.style.display = "inline-block";
+          downloadBtn.style.marginTop = "1rem";
+          downloadBtn.style.color = "#00bcd4";
+          downloadBtn.style.textDecoration = "none";
+          qrContainer.appendChild(downloadBtn);
+        }
+      }, 300);
+    } else {
+      alert("Por favor, escribe una URL válida.");
+    }
+  }
+</script>
+
+</body>
+<footer>
+    <p>&copy; 2025 Jonathan Jiménez</p>
+  </footer>
+</html>
